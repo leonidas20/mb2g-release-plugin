@@ -4,7 +4,7 @@
 
     <groupId>guru.springframework</groupId>
     <artifactId>mb2g-release-plugin</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.4</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,9 +32,9 @@
     </dependencies>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/springframeworkguru/mb2g-release-plugin.git</developerConnection>
-        <url>https://github.com/springframeworkguru/mb2g-release-plugin</url>
-        <tag>HEAD</tag>
+        <developerConnection>scm:git:https://github.com/leonidas20/mb2g-release-plugin.git</developerConnection>
+        <url>https://github.com/leonidas20/mb2g-release-plugin</url>
+        <tag>mb2g-release-plugin-1.4</tag>
     </scm>
 
     <build>
@@ -55,6 +55,12 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.3</version>
+                <configuration>
+                    <checkModificationExcludes>
+                        <checkModificationExclude>pom.xml</checkModificationExclude>
+                    </checkModificationExcludes>
+                </configuration>
+
             </plugin>
         </plugins>
     </build>
@@ -62,11 +68,11 @@
     <distributionManagement>
         <repository>
             <id>packagecloud.release</id>
-            <url>packagecloud+https://packagecloud.io/springframeworkguru/release</url>
+            <url>packagecloud+https://packagecloud.io/somerepositoryL/release</url>
         </repository>
         <snapshotRepository>
             <id>packagecloud.snapshot</id>
-            <url>packagecloud+https://packagecloud.io/springframeworkguru/snapshot</url>
+            <url>packagecloud+https://packagecloud.io/somerepositoryL/snapshot</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
